@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en-gb">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ralph Cox // Web Developer</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
-  <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
-    </nav>
-  </header>
+  <body>
+    <!-- main logo / nav -->
+    <header>
+      <!-- Name given as H1 in Starter code semantically incorrect, using ARIA role -->
+      <h1 role="mark">Ralph Cox</h1>
+      <nav>
+        <div>
+          <!-- Adding links to section IDs and external link to CV -->
+          <a href="#aboutMe">About Me</a>
+          <a href="#work">Work</a>
+          <a href="#contactMe">Contact Me</a>
+          <a href="https://www.strategy66.com/">Resume</a>
+        </div>
+      </nav>
+    </header>
 
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <div>
-      <h2>Cool subtitle here!</h2>
-    </div>
-  </section>
+    <!-- hero banner -->
+    <!-- Banner not placed in header Starter code semantically incorrect, using ARIA role -->
 
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
+    <section class="hero-banner" role="banner">
+      <div>
+        <!-- Page Titles given as H2 in Starter code semantically incorrect, using ARIA role -->
+
+        <h2 role="heading" aria-level="1" class="title_heading">The Eclectic WebDev Portfolio</h2>
+      </div>
     </section>
 
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
-    </section>
+    <main class="page-wrapper">
+      <!-- about me -->
+      <section class="page-section" id="about">
+        <!-- add ID for Nav link -->
+        <h2 id="aboutMe">About Me</h2>
+      </section>
 
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-    </section>
-  </main>
-</body>
+      <!-- portfolio container -->
+      <section class="page-section" id="work">
+        <!-- add ID for Nav link -->
+        <h2 id="work">Work</h2>
+      </section>
+
+      <!-- contact -->
+      <section class="page-section contact" id="contact">
+        <!-- add ID for Nav link -->
+        <h2 id="contactMe">Contact Me</h2>
+      </section>
+    </main>
+  </body>
 
 </html>
