@@ -1,0 +1,24 @@
+:root {
+  /* css variables for colors */
+  --light: rgb(171, 164, 219);
+  --dark: rgb(27, 17, 109);
+  --mid: rgb(65, 57, 130);
+  --outline: rgb(170, 93, 42);
+  --main-background: rgba(201, 194, 248, 0.801);
+}
+
+body {
+  background-color: var(--main-background);
+}
+
+/* set flexbox for all structure elements */
+header,
+h1,
+nav,
+.hero-banner,
+.heading,
+#about,
+#work,
+#contactMe {
+  display: flex;
+}
