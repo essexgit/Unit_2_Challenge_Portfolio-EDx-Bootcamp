@@ -7,8 +7,26 @@
   --main-background: rgba(201, 194, 248, 0.801);
 }
 
+/* set body as big grid */
 body {
   background-color: var(--main-background);
+  display: grid;
+  grid-template-columns: 5fr 1fr 6fr 6fr;
+  grid-template-rows: 1fr 2fr 2fr 3fr 1fr 1fr 2fr;
+  /* map page elements to full page grid location */
+  grid-template-areas:
+    "header header header header"
+    "banner banner banner banner"
+    "banner banner banner banner"
+    "aboutTitle gutter aboutText aboutText"
+    "aboutTitle gutter aboutText aboutText"
+    "workTitle gutter workPicLink workPicLink"
+    "workTitle gutter workPicLink workPicLink"
+    "workTitle gutter workPicLink workPicLink"
+    "workTitle gutter workPicLink2 workPicLink3"
+    "workTitle gutter workPicLink4 workPicLink5"
+    "contactTitle gutter phoneEmail socialMedia"
+    "contactTitle gutter phoneEmail socialMedia";
 }
 
 /* set flexbox for all structure elements */
@@ -21,4 +39,10 @@ nav,
 #work,
 #contactMe {
   display: flex;
+}
+
+/* Font sizes and colors */
+h1 {
+  font-size: 2rem;
+  color: var(--dark);
 }
