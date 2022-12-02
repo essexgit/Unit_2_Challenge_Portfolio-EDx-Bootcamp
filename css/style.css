@@ -15,13 +15,13 @@ body {
   grid-template-rows: 1fr 2fr 2fr 3fr 1fr 1fr 2fr;
   /* map page elements to full page grid location */
   grid-template-areas:
-    "header     header     header    header"
-    "banner    banner     banner     banner"
-    "aboutTitle gutter    aboutText  aboutText"
-    "workTitle gutter     workPicLink workPicLink"
-    "workTitle gutter     workPicLink2 workPicLink3"
-    "workTitle gutter     workPicLink4 workPicLink5"
-    "contactTitle gutter    phoneEmail socialMedia"
+    "header     header     header          header"
+    "banner     banner     banner             banner"
+    "aboutTitle   gutter    aboutText        aboutText"
+    "workTitle   gutter     workPicLink      workPicLink"
+    ".........    gutter     workPicLink2   workPicLink3"
+    ".........    gutter     workPicLink4   workPicLink5"
+    "contactTitle gutter    phoneEmail      socialMedia"
   ;
 }
 
@@ -48,24 +48,76 @@ header {
   align-items: flex-end;
   justify-content: space-between;
   grid-area: header;
-  background-color: #333;
+  background-color: #555;
+  border: 1px solid black;
+
 }
 
-#myName {
+.myName {
   border: 1px solid black;
   grid-area: 1 / 1 / span 2 / span 1;
+
 }
 
-nav {
+header nav {
   justify-content: space-evenly;
-  grid-column: 4 / 5;
-  grid-row: 1/ 2;
+  grid-area: 1 / 1 / span1 / span 2;
+  z-index: 1;
+  border: 1px solid black;
+  justify-self: flex-end;
+}
+
+.hero-banner {
+  grid-area: banner;
+  border: 1px solid black;
+}
+
+#about {
+  justify-content: space-between;
+  border: 1px solid black;
 }
 
 #aboutMe {
   grid-area: aboutTitle;
+  border: 1px solid black;
 }
 
-#about p {
+#aboutText {
   grid-area: aboutText;
+  border: 1px solid black;
+}
+
+#workTitle {
+  grid-area: workTitle;
+  border: 1px solid black;
+}
+
+#workPicLink {
+  grid-area: workPicLink;
+  border: 1px solid black;
+}
+
+#workPicLink2 {
+  grid-area: workPicLink2;
+  border: 1px solid black;
+}
+
+#workPicLink3 {
+  grid-area: workPicLink3;
+  border: 1px solid black;
+}
+
+#workPicLink4 {
+  grid-area: workPicLink4;
+  border: 1px solid black;
+}
+
+#workPicLink5 {
+  grid-area: workPicLink5;
+  border: 1px solid black;
+}
+
+#contactMe {
+  grid-area: contact;
+  border: 1px solid black;
 }
