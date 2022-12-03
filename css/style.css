@@ -7,34 +7,12 @@
   --main-background: rgba(201, 194, 248, 0.801);
 }
 
-/* set body as big grid */
+/* set body as flex column to place items down page */
 body {
   background-color: var(--main-background);
-  display: grid;
-  grid-template-columns: 5fr 1fr 6fr 6fr;
-  grid-template-rows: 1fr 2fr 2fr 3fr 1fr 1fr 2fr;
-  /* map page elements to full page grid location */
-  grid-template-areas:
-    "header     header     header          header"
-    "banner     banner     banner             banner"
-    "aboutTitle   gutter    aboutText        aboutText"
-    "workTitle   gutter     workPicLink      workPicLink"
-    ".........    gutter     workPicLink2   workPicLink3"
-    ".........    gutter     workPicLink4   workPicLink5"
-    "contactTitle gutter    phoneEmail      socialMedia"
-  ;
-}
-
-/* set flexbox for all structure elements */
-header,
-h1,
-nav,
-.hero-banner,
-.heading,
-#about,
-#work,
-#contactMe {
   display: flex;
+  flex-direction: column;
+
 }
 
 /* Font sizes and colors */
@@ -45,79 +23,106 @@ h1 {
 
 /* separate name from nav items */
 header {
+  display: flex;
   align-items: flex-end;
+  padding-inline: 3rem;
   justify-content: space-between;
-  grid-area: header;
   background-color: #555;
-  border: 1px solid black;
-
+  height: 200px;
 }
 
-.myName {
-  border: 1px solid black;
-  grid-area: 1 / 1 / span 2 / span 1;
-
+/* put nav items in a row */
+nav {
+  display: flex;
 }
 
-header nav {
-  justify-content: space-evenly;
-  grid-area: 1 / 1 / span1 / span 2;
-  z-index: 1;
-  border: 1px solid black;
-  justify-self: flex-end;
+/* separate Nav items */
+nav a {
+  margin-inline: 2rem;
 }
 
+/* place banner and text in row*/
 .hero-banner {
-  grid-area: banner;
-  border: 1px solid black;
+  display: flex;
+  /* reverse row to keep text to right */
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-bottom: 3rem;
 }
 
-#about {
-  justify-content: space-between;
-  border: 1px solid black;
+/* set height of hero image and bleed past page edge */
+.banner {
+  height: 200px;
+  width: 101%;
 }
 
-#aboutMe {
-  grid-area: aboutTitle;
-  border: 1px solid black;
+/* make title absolute to float over hero banner */
+.title_heading {
+  position: absolute;
+  margin: 40px;
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+
+/* put sections into rows */
+#about,
+#work,
+#contact {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 3rem;
+}
+
+/* section titles aligned */
+#aboutMe,
+#workTitle,
+#contactMe {
+  font-size: 1.5rem;
+  color: var(--dark);
+  min-width: 10vw;
+  text-align: right;
+  border-right: var(--dark);
 }
 
 #aboutText {
-  grid-area: aboutText;
-  border: 1px solid black;
+  font-size: 1rem;
+  color: var(--dark);
+
 }
 
-#workTitle {
-  grid-area: workTitle;
-  border: 1px solid black;
+.workDisplay {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    "workPicLink workPicLink"
+    "workPicLink2 workPicLink3"
+    "workPicLink4 workPicLink5";
+  gap: 3rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 #workPicLink {
   grid-area: workPicLink;
-  border: 1px solid black;
 }
 
 #workPicLink2 {
   grid-area: workPicLink2;
-  border: 1px solid black;
 }
 
 #workPicLink3 {
   grid-area: workPicLink3;
-  border: 1px solid black;
 }
 
 #workPicLink4 {
   grid-area: workPicLink4;
-  border: 1px solid black;
 }
 
 #workPicLink5 {
   grid-area: workPicLink5;
-  border: 1px solid black;
-}
-
-#contactMe {
-  grid-area: contact;
-  border: 1px solid black;
 }

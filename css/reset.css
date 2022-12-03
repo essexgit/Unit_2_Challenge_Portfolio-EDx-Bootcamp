@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  min-height: 100%;
+  height: 100vh;
   /* add font and increase line height from starter */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
@@ -26,7 +26,7 @@ h5,
 h6,
 p {
   font-size: 100%;
-  /* add marging from starter */
+  /* add margin from starter */
   margin: 0;
 }
 
@@ -45,4 +45,9 @@ code {
 ol,
 ul {
   list-style: none;
+}
+
+/* remove underline from links */
+a {
+  text-decoration: none;
 }
