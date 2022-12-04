@@ -19,16 +19,20 @@ body {
 h1 {
   font-size: 2rem;
   color: var(--dark);
+  background-color: skyblue;
+
+  text-align: right;
+  padding-left: 8rem;
+  padding-right: 1.5rem;
 }
 
 /* separate name from nav items */
 header {
   display: flex;
   align-items: flex-end;
-  padding-inline: 3rem;
   justify-content: space-between;
   background-color: #555;
-  height: 200px;
+  height: 150px;
 }
 
 /* put nav items in a row */
@@ -36,8 +40,9 @@ nav {
   display: flex;
 }
 
-/* separate Nav items */
+/* separate and color Nav items */
 nav a {
+  color: skyblue;
   margin-inline: 2rem;
 }
 
@@ -52,8 +57,9 @@ nav a {
 
 /* set height of hero image and bleed past page edge */
 .banner {
-  height: 200px;
+  height: 150px;
   width: 101%;
+  z-index: -1;
 }
 
 /* make title absolute to float over hero banner */
@@ -62,6 +68,12 @@ nav a {
   margin: 40px;
   font-size: 1.5rem;
   color: var(--dark);
+  background-color: skyblue;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 /* put sections into rows */
@@ -69,8 +81,7 @@ nav a {
 #work,
 #contact {
   display: flex;
-  gap: 40px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 /* section titles aligned */
@@ -81,24 +92,34 @@ nav a {
   color: var(--dark);
   min-width: 10vw;
   text-align: right;
-  border-right: var(--dark);
+  border-right: 3px solid var(--dark);
+  padding-right: 3.5rem;
+  margin-left: 4rem;
 }
 
-#aboutText {
+#aboutText,
+.socialLinks {
   font-size: 1rem;
   color: var(--dark);
+  margin-right: 4rem;
+  margin-left: 2rem;
+}
 
+#aboutText:nth-child(2) p {
+  margin-bottom: 2rem;
 }
 
 .workDisplay {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 40vh 15vh 15vh;
   grid-template-areas:
     "workPicLink workPicLink"
     "workPicLink2 workPicLink3"
     "workPicLink4 workPicLink5";
-  gap: 3rem;
+  gap: 1rem;
+  margin-right: 4rem;
+  margin-left: 2rem;
 }
 
 img {
@@ -125,4 +146,17 @@ img {
 
 #workPicLink5 {
   grid-area: workPicLink5;
+}
+
+#workPicLink,
+#workPicLink2,
+#workPicLink3,
+#workPicLink4,
+#workPicLink5 {
+  border: 5px solid skyblue;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
 }
