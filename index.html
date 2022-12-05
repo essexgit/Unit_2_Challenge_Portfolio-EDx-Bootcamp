@@ -13,50 +13,59 @@
   <body>
     <!-- main logo / nav -->
 
-    <header>
-      <!-- Name given as H1 in Starter code semantically incorrect, using ARIA role -->
-      <div id="nameTitleWrapper" class="titleCol">
-        <h1 role="mark" id="myName">Ralph Cox</h1>
-      </div>
-      <nav>
-        <!-- Adding links to section IDs and external link to CV -->
-        <a href="#aboutMe">
-          About Me
-        </a>
-        <a href="#work">
-          Work
-        </a>
-        <a href="#contactMe">
-          Contact Me
-        </a>
-        <a href="https://www.strategy66.com/">
-          Resume
-        </a>
-      </nav>
-    </header>
+    <div id="headerWrapper">
+      <header>
+        <!-- Name given as H1 in Starter code semantically incorrect, using ARIA role -->
+        <div id="nameTitleWrapper">
+          <h1 role="mark" id="myName">Ralph Cox</h1>
+        </div>
+        <nav>
+          <!-- Adding links to section IDs and external link to CV -->
+          <a href="#aboutMe">
+            About Me
+          </a>
+          <a href="#work">
+            Work
+          </a>
+          <a href="#contactMe">
+            Contact Me
+          </a>
+          <a href="https://www.strategy66.com/">
+            Resume
+          </a>
+        </nav>
+      </header>
+    </div>
 
     <!-- hero banner -->
     <!-- Banner not placed in header Starter code semantically incorrect, using ARIA role -->
 
-    <section class="hero-banner" role="banner">
-      <!-- Page Titles given as H2 in Starter code semantically incorrect, using ARIA role -->
-      <h2 role="heading" aria-level="1" class="title_heading">The Eclectic WebDev Portfolio</h2>
-      <img class="banner" src="./images/02-hero-bg.jpg" alt="">
-    </section>
+    <div id="bannerWrapper">
+      <section id="heroBanner" role="banner">
+        <!-- Page Titles given as H2 in Starter code semantically incorrect, using ARIA role -->
+        <div id="pageTitleWrapper">
+          <h2 role="heading" aria-level="1" id="pageTitle">The Eclectic WebDev Portfolio</h2>
+        </div>
+        <div id="heroWrapper"><img id="hero" src="./images/02-hero-bg.jpg" alt=""></div>
+      </section>
+    </div>
 
-    <main class="page-wrapper">
+    <main id="pageWrapper">
       <!-- about me -->
-      <section class="page-section" id="aboutMe">
+      <section class="page-section " id="aboutMe">
 
-        <div class="aboutTitleWrapper" class="titleCol">
+        <div id="aboutTitleWrapper" class="titleCol">
           <h2 id="aboutMeTitle">About Me</h2>
         </div>
-        <div id="aboutMeText" class="contentCol">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore aut perspiciatis cupiditate dolorem nam
-            harum, quia pariatur odit totam ratione cum sapiente molestias nulla sunt, illo vero optio. In, minus?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum fugit dignissimos, obcaecati assumenda
-            distinctio, velit deserunt iusto corporis rerum impedit ipsam sit totam nisi fuga, amet enim placeat?
-            Numquam!</p>
+        <div id="aboutMeTextWrapper">
+          <div id="aboutMeText" class="contentCol">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore aut perspiciatis cupiditate dolorem nam
+              harum, quia pariatur odit totam ratione cum sapiente molestias nulla sunt, illo vero optio. In, minus?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum fugit dignissimos, obcaecati
+              assumenda
+              distinctio, velit deserunt iusto corporis rerum impedit ipsam sit totam nisi fuga, amet enim placeat?
+              Numquam!</p>
+          </div>
         </div>
       </section>
 
@@ -80,7 +89,7 @@
       </section>
 
       <!-- contact -->
-      <section class="page-section contact" id="contact">
+      <section class="page-section" id="contact">
 
         <div id="contactTitleWrapper" class="titleCol">
           <h2 id="contactMe">Contact Me</h2>
