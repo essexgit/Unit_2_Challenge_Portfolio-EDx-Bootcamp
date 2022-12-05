@@ -7,12 +7,10 @@
   --main-background: rgba(201, 194, 248, 0.801);
 }
 
-/* set body as flex column to place items down page */
+/* body background */
 body {
   background-color: var(--main-background);
-  display: flex;
-  flex-direction: column;
-  height: 120%;
+
 }
 
 /* Font sizes and colors */
@@ -21,28 +19,31 @@ h1 {
   color: var(--dark);
   background-color: skyblue;
   text-align: right;
-  padding-left: 8rem;
-  padding-right: 1.5rem;
+  margin: 1rem;
+  padding: 0.5rem 1rem 1rem 8rem;
 }
 
 /* separate name from nav items */
 header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   background-color: #555;
-  height: 150px;
+  height: 10vh;
+  justify-content: space-between;
 }
 
 /* put nav items in a row */
 nav {
   display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin: 0 4rem 1rem 0;
+  border: 1px solid black;
 }
 
 /* separate and color Nav items */
-nav a {
+nav * {
   color: skyblue;
-  margin-inline: 2rem;
+  border-bottom: 2px solid skyblue;
 }
 
 /* place banner and text in row*/
@@ -51,6 +52,7 @@ nav a {
   /* reverse row to keep text to right */
   flex-direction: row-reverse;
   align-items: flex-end;
+  justify-content: flex-start;
   margin-bottom: 3rem;
 }
 
@@ -68,51 +70,28 @@ nav a {
   font-size: 1.5rem;
   color: var(--dark);
   background-color: skyblue;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
+
 }
 
-img {
-  max-height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.workGroup img {
-  max-height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-/* using  3 row single column grid for main section */
+/* using   single column  for main section */
 .page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15vh 1fr 10vh;
-  grid-template-areas:
-    "about"
-    "work"
-    "contact";
-  gap: 2rem;
-  flex: 0;
-  /* overflow: hidden; */
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
-/* page-wrapper grid placement */
-#about {
-  grid-area: about;
-}
-
-#work {
-  grid-area: work;
-}
-
-#contact {
-  grid-area: contact;
-}
 
 /* make all 3 sections flex rows */
 .page-section {
   display: flex;
+  border: 1px solid black;
+}
+
+/* separate titles from content */
+#about,
+#contact {
+  justify-content: space-between;
 }
 
 /* section titles aligned */
@@ -122,69 +101,69 @@ img {
 
   font-size: 1.5rem;
   color: var(--dark);
-  width: 10vw;
+  width: 15vw;
   text-align: right;
-  border-right: 3px solid var(--dark);
-  padding-right: 3.5rem;
-  padding-left: 4rem;
+  padding-right: 2rem;
+  padding-left: 8rem;
 
 }
 
 /* tidy aboutme text */
-#aboutText {
+#aboutText,
+#workDisplay {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  border: 1px solid black;
+  margin-inline: 2rem;
+  padding-inline: 2rem;
 }
 
-/* put social contact into rows */
 #socialLinks {
   display: flex;
+  align-items: center;
   justify-content: space-around;
-}
-
-#aboutText,
-#socialLinks {
-  font-size: 1rem;
-  color: var(--dark);
-  padding-right: 4rem;
-  padding-left: 2rem;
-}
-
-#workDisplay {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: fit-content(4fr) fit-content(1fr) fit-content(1fr);
-  grid-template-areas:
-    "workPicLink workPicLink"
-    "workPicLink2 workPicLink3"
-    "workPicLink4 workPicLink5";
   gap: 1rem;
-  margin-right: 4rem;
-  margin-left: 2rem;
+  border: 1px solid black;
+  margin-inline: 2rem;
+  padding-inline: 2rem;
 }
 
 #workPicLink {
-  grid-area: workPicLink;
+
+  background-image: url(../images/02-portfolio-1.jpg);
+  background-size: cover;
+  border: 1px solid black;
 }
 
 #workPicLink2 {
-  grid-area: workPicLink2;
+
+  border: 1px solid red;
+  background-image: url(../images/02-portfolio-2.jpg);
+  background-size: cover;
 }
 
 #workPicLink3 {
-  grid-area: workPicLink3;
+  background-image: url(../images/02-portfolio-3.jpg);
+  background-size: cover;
+  border: 1px solid yellow;
 }
 
 #workPicLink4 {
-  grid-area: workPicLink4;
+  background-image: url(../images/02-portfolio-4.jpg);
+  background-size: cover;
+  border: 1px solid pink;
 }
 
 #workPicLink5 {
-  grid-area: workPicLink5;
+  background-image: url(../images/02-run-buddy.jpg);
+  background-size: cover;
+  border: 1px solid green;
 }
 
 .workGroup {
   border: 5px solid skyblue;
-
+  height: 10vh;
+  width: 40%;
+  border: 1px solid black;
 }
