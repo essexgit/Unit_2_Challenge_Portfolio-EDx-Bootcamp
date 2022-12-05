@@ -15,9 +15,7 @@
 
     <header>
       <!-- Name given as H1 in Starter code semantically incorrect, using ARIA role -->
-      <div id="nameTitleWrapper" class="titleCol">
-        <h1 role="mark" id="myName">Ralph Cox</h1>
-      </div>
+      <h1 role="mark" id="myName">Ralph Cox</h1>
       <nav>
         <!-- Adding links to section IDs and external link to CV -->
         <a href="#aboutMe">
@@ -46,12 +44,12 @@
 
     <main class="page-wrapper">
       <!-- about me -->
-      <section class="page-section" id="aboutMe">
-
-        <div class="aboutTitleWrapper" class="titleCol">
-          <h2 id="aboutMeTitle">About Me</h2>
+      <section class="page-section" id="about">
+        <!-- add ID for Nav link -->
+        <div class="aboutHold">
+          <h2 id="aboutMe">About Me</h2>
         </div>
-        <div id="aboutMeText" class="contentCol">
+        <div id="aboutText">
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore aut perspiciatis cupiditate dolorem nam
             harum, quia pariatur odit totam ratione cum sapiente molestias nulla sunt, illo vero optio. In, minus?</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum fugit dignissimos, obcaecati assumenda
@@ -62,11 +60,11 @@
 
       <!-- portfolio container -->
       <section class="page-section" id="work">
-
-        <div id="workTitleWrapper" class="titleCol">
-          <h2 id="workTitle">Work</h2>
+        <!-- add ID for Nav link -->
+        <div id="workTitle">
+          <h2>Work</h2>
         </div>
-        <div id="workDisplay" class="contentCol">
+        <div id="workDisplay">
           <div class="mainImage"><img class="big1Image" src="./images/02-portfolio-1.jpg" alt=""></div>
           <div class="rowImages">
             <img class="workImages" src="./images/02-portfolio-2.jpg" alt="">
@@ -76,27 +74,33 @@
             <img class="workImages" src="./images/02-portfolio-4.jpg" alt="">
             <img class="workImages" src="./images/02-run-buddy.jpg" alt="">
           </div>
+          <!-- <a href="#" id="workPicLink" class="workGroup"></a>
+          <a href="#" id="workPicLink2" class="workGroup">Pic</a>
+          <a href="#" id="workPicLink3" class="workGroup">Pic</a>
+          <a href="#" id="workPicLink4" class="workGroup">Pic</a>
+          <a href="#" id="workPicLink5" class="workGroup">Pic</a> -->
+
         </div>
       </section>
 
       <!-- contact -->
       <section class="page-section contact" id="contact">
-
-        <div id="contactTitleWrapper" class="titleCol">
+        <!-- add ID for Nav link -->
+        <div class="contactHold">
           <h2 id="contactMe">Contact Me</h2>
         </div>
-        <div id="socialLinksWrapper" class="contentCol">
-          <div id="socialLinks">
-            <a href="#phone">
-              Phone
-            </a>
-            <a href="#linkedIn">
-              LinkedIn
-            </a>
-            <a href="#twitter">
-              twitter
-            </a>
-          </div>
+        <div id="socialLinks">
+          <a href="#phone">
+            Phone
+          </a>
+          <a href="#linkedIn">
+            LinkedIn
+          </a>
+
+          <a href="#twitter">
+            twitter
+          </a>
+
         </div>
       </section>
     </main>

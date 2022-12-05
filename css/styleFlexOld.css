@@ -1,0 +1,171 @@
+:root {
+  /* css variables for colors */
+  --light: rgb(171, 164, 219);
+  --dark: rgb(27, 17, 109);
+  --mid: rgb(65, 57, 130);
+  --outline: rgb(170, 93, 42);
+  --main-background: rgba(201, 194, 248, 0.801);
+}
+
+/* body background */
+body {
+  background-color: var(--main-background);
+
+}
+
+/* Font sizes and colors */
+h1 {
+  font-size: 2rem;
+  color: var(--dark);
+  background-color: skyblue;
+  text-align: right;
+  margin: 1rem;
+  padding: 0.5rem 1rem 1rem 8rem;
+}
+
+/* separate name from nav items */
+header {
+  display: flex;
+  background-color: #555;
+  height: 10vh;
+  justify-content: space-between;
+}
+
+/* put nav items in a row */
+nav {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin: 0 4rem 1rem 0;
+  border: 1px solid black;
+}
+
+/* separate and color Nav items */
+nav * {
+  color: skyblue;
+  border-bottom: 2px solid skyblue;
+}
+
+/* place banner and text in row*/
+.hero-banner {
+  display: flex;
+  /* reverse row to keep text to right */
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+}
+
+/* set height of hero image and bleed past page edge */
+.banner {
+  height: 150px;
+  width: 101%;
+  z-index: -1;
+}
+
+/* make title absolute to float over hero banner */
+.title_heading {
+  position: absolute;
+  margin: 40px;
+  font-size: 1.5rem;
+  color: var(--dark);
+  background-color: skyblue;
+  padding-inline: 1rem;
+
+}
+
+/* using   single column  for main section */
+.page-wrapper {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* make all 3 sections flex rows */
+.page-section {
+  display: flex;
+  border: 1px solid black;
+  margin-top: 3rem;
+}
+
+/* separate titles from content */
+/* #about,
+#contact {
+  justify-content: space-between;
+} */
+
+/* section titles aligned */
+#aboutMe,
+#workTitle,
+#contactMe {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--dark);
+  width: 15vw;
+  padding-right: 2rem;
+  padding-left: 8rem;
+
+}
+
+/* tidy aboutme text */
+#aboutText,
+#workDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid black;
+  margin-inline: 2rem;
+  padding-inline: 2rem;
+}
+
+#socialLinks {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+  border: 1px solid black;
+  margin-inline: 2rem;
+  padding-inline: 2rem;
+}
+
+#workPicLink {
+
+  background-image: url(../images/02-portfolio-1.jpg);
+  background-size: cover;
+  border: 1px solid black;
+}
+
+#workPicLink2 {
+
+  border: 1px solid red;
+  background-image: url(../images/02-portfolio-2.jpg);
+  background-size: cover;
+}
+
+#workPicLink3 {
+  background-image: url(../images/02-portfolio-3.jpg);
+  background-size: cover;
+  border: 1px solid yellow;
+}
+
+#workPicLink4 {
+  background-image: url(../images/02-portfolio-4.jpg);
+  background-size: cover;
+  border: 1px solid pink;
+}
+
+#workPicLink5 {
+  background-image: url(../images/02-run-buddy.jpg);
+  background-size: cover;
+  border: 1px solid green;
+}
+
+.workGroup {
+  border: 5px solid skyblue;
+  height: 10vh;
+  width: 40%;
+  border: 1px solid black;
+}

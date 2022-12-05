@@ -1,0 +1,193 @@
+:root {
+  /* css variables for colors */
+  --light: rgb(171, 164, 219);
+  --dark: rgb(27, 17, 109);
+  --mid: rgb(65, 57, 130);
+  --outline: rgb(170, 93, 42);
+  --main-background: rgba(201, 194, 248, 0.801);
+}
+
+/* set body as flex column to place items down page */
+body {
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Font sizes and colors */
+h1 {
+  font-size: 2rem;
+  color: var(--dark);
+  background-color: skyblue;
+
+  text-align: right;
+  padding-left: 8rem;
+  padding-right: 1.5rem;
+}
+
+/* separate name from nav items */
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #555;
+  height: 150px;
+}
+
+/* put nav items in a row */
+nav {
+  display: flex;
+}
+
+/* separate and color Nav items */
+nav a {
+  color: skyblue;
+  margin-inline: 2rem;
+}
+
+/* place banner and text in row*/
+.hero-banner {
+  display: flex;
+  /* reverse row to keep text to right */
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+/* set height of hero image and bleed past page edge */
+.banner {
+  height: 150px;
+  width: 101%;
+  z-index: -1;
+}
+
+/* make title absolute to float over hero banner */
+.title_heading {
+  position: absolute;
+  margin: 40px;
+  font-size: 1.5rem;
+  color: var(--dark);
+  background-color: skyblue;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* put sections into rows */
+.page-section {
+  display: flex;
+  margin-bottom: 1rem;
+  width: 90vw;
+}
+
+/* separate social Links and space */
+/* #socialLinks a {
+  justify-content: space-evenly;
+  flex-grow: 1;
+} */
+
+/* section titles aligned */
+.aboutHold,
+#workTitle,
+.contactHold {
+  font-size: 1.5rem;
+  color: var(--dark);
+  /* width: 15vw; */
+  /* text-align: right; */
+  border-right: 3px solid var(--dark);
+  /* padding-right: 4rem; */
+  margin-left: 4rem;
+  /* margin: auto; */
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.aboutHold,
+#workTitle {
+  width: 15vw;
+  padding-right: 4rem;
+}
+
+.contactHold {
+  width: 10vw;
+  padding-right: 3rem;
+}
+
+#aboutText,
+#socialLinks {
+  font-size: 1rem;
+  color: var(--dark);
+  margin-right: 4rem;
+  margin-left: 2rem;
+}
+
+#aboutText:nth-child(2) p {
+  margin-bottom: 2rem;
+}
+
+.rowImages {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 3vh;
+}
+
+.big1Image {
+
+  width: 1000px;
+  height: 400px;
+}
+
+.mainImage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.workImages {
+  width: 500px;
+  height: 200px;
+}
+
+#workDisplay {
+  width: 100vw;
+}
+
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* #workPicLink {
+  grid-area: workPicLink;
+}
+
+#workPicLink2 {
+  grid-area: workPicLink2;
+}
+
+#workPicLink3 {
+  grid-area: workPicLink3;
+}
+
+#workPicLink4 {
+  grid-area: workPicLink4;
+}
+
+#workPicLink5 {
+  grid-area: workPicLink5;
+}
+
+.workGroup {
+  border: 5px solid skyblue;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+} */
