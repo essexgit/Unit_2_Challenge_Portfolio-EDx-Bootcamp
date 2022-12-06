@@ -254,7 +254,6 @@ nav a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
 }
 
 #socialLinks {
@@ -288,6 +287,7 @@ nav a {
     margin-bottom: 2rem;
   }
 
+  /* change Nav to 4*4 stack */
   nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -297,6 +297,7 @@ nav a {
     margin-bottom: 2rem;
   }
 
+  /* move section titles from side to above */
   .titleCol {
     display: flex;
     justify-content: left;
@@ -305,10 +306,76 @@ nav a {
     margin-top: 2rem;
   }
 
+  /* remove excess empty space */
   #workDisplay {
     margin: auto;
   }
-
 }
 
-/* media query @ to stack projects and Navs */
+/* media query @700px to stack projects and Navs */
+@media screen and (max-width:700px) {
+
+  h1 {
+    padding: 2rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-bg);
+  }
+
+  .contentCol {
+    padding-top: 1rem;
+    width: 75vw;
+    margin: auto;
+  }
+
+  .titleCol {
+    margin-top: 1rem;
+  }
+
+  #socialLinks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .mainImage,
+  .rowImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1vh;
+  }
+
+  .big1Image,
+  .workImages {
+    width: 80vw;
+    height: 50vw;
+    object-fit: cover;
+    border: 5px solid var(--light);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    background: var(--main-bg);
+    padding: 0 1rem 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    color: var(--dark);
+    /* background: var(--main-bg); */
+    padding: 0 1rem 0 1rem;
+    border-left: var(--dark);
+    text-align: right;
+  }
+}
