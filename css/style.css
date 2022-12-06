@@ -29,7 +29,6 @@ h2 {
 
 /* establish grid structures */
 body {
-
   background: var(--main-bg);
   display: grid;
   grid-template-columns: 100%;
@@ -88,7 +87,6 @@ body {
   grid-template-columns: 15vw 1fr;
   grid-template-areas:
     "aboutTitle aboutContent";
-
 }
 
 #work {
@@ -105,7 +103,6 @@ body {
   grid-template-columns: 15vw 1fr;
   grid-template-areas:
     "contactTitle socialMedia";
-  padding-right: 4rem;
 }
 
 /* place header in row & separate name and nav */
@@ -122,7 +119,6 @@ nav {
   gap: 2rem;
   margin-right: 11rem;
   margin-bottom: 2rem;
-  border: 1px solid black;
 }
 
 /* color & underline nav items */
@@ -176,6 +172,7 @@ nav a {
 #workDisplay {
   width: 75vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
@@ -264,7 +261,6 @@ nav a {
   display: flex;
   justify-content: center;
   gap: 5rem;
-
 }
 
 #socialLinks a {
@@ -273,7 +269,46 @@ nav a {
 
 }
 
-/* media query @ 1010 px to place Nav vertical and side titles over sections */
+/* media query @ 1000 px to place Nav vertical and side titles over sections */
+@media (max-width:1000px) {
+  #pageWrapper {
+    grid-area: pageWrapper;
+    display: flex;
+    flex-direction: column;
+  }
 
+  #aboutMe,
+  #work,
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
 
-/* media query @ to stack projects */
+  #contact {
+    margin-bottom: 2rem;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .titleCol {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    width: auto;
+    margin-top: 2rem;
+  }
+
+  #workDisplay {
+    margin: auto;
+  }
+
+}
+
+/* media query @ to stack projects and Navs */
