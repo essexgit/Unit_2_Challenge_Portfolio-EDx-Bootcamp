@@ -211,6 +211,10 @@ nav a {
   border: 5px solid var(--light);
 }
 
+#bbh {
+  object-fit: contain;
+}
+
 .linkedImageWrapper {
   display: flex;
   justify-content: flex-start;
@@ -238,10 +242,11 @@ nav a {
 #project3,
 #project4,
 #project5 {
-  /* display: flex; */
+
   color: var(--dark);
   font-size: 1.5rem;
 }
+
 
 .expl {
   /* display: flex; */
